@@ -52,3 +52,5 @@
 } > analysis_report.txt
 
 echo "Analyysi valmis!"
+
+cat analysis_report.txt
