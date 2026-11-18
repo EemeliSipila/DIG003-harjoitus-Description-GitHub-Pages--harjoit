@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viikko 2 – GitHub Actions -analyysi</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { margin: 0; color: #252a30; }
+    main { max-width: 850px !important; margin: 48px auto !important; padding: 0 22px 50px; }
+    a { color: #164d85; }
+    li { margin: 10px 0; }
+    .card { background: #fff; border-radius: 12px; padding: 25px; margin: 22px 0; box-shadow: 0 3px 14px rgba(0,0,0,.07); }
+    .tag { display: inline-block; background: #e4f3e6; border-radius: 100px; padding: 5px 12px; color: #205b33; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <p><a href="index.html">← Takaisin etusivulle</a></p>
+    <h1>Viikko 2 – GitHub Actions -analyysi</h1>
+    <p>Tehtävänä oli rakentaa automaattinen analyysi, joka tunnistaa repositorion ohjelmointikielet ja etsii mahdollisia suunnittelumalleja koodista.</p>
+    <section class="card">
+      <h2>Mitä tein?</h2>
+      <ul>
+        <li>Tein <code>analysis.sh</code>-skriptin, joka tarkistaa tiedostopäätteitä ja etsii tunnettuja suunnittelumalleihin viittaavia sanoja.</li>
+        <li>Lisäsin GitHub Actions -työnkulun, joka käynnistyy aina push- ja pull request -tapahtumista.</li>
+        <li>Työnkulku näyttää raportin lokissa ja tallentaa sen <code>analysis-report</code>-artefaktiksi.</li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>Tulos</h2>
+      <p><span class="tag">GitHub Actions: onnistunut</span></p>
+      <p>Analysoidussa harjoitusprojektissa käytössä ovat HTML ja CSS. Skripti ei löytänyt ohjelmakoodista selkeitä merkkejä Singleton-, Factory Method-, Observer-, Decorator- tai Strategy-malleista. Tunnistus perustuu yksinkertaisiin hakusanoihin, joten se ei ole täydellinen.</p>
+    </section>
+    <section class="card">
+      <h2>Tehtävän linkit</h2>
+      <ul>
+        <li><a href="https://github.com/EemeliSipila/DIG003-harjoitus-Description-GitHub-Pages--harjoit/blob/main/analysis.sh">Analyysiskripti (analysis.sh)</a></li>
+        <li><a href="https://github.com/EemeliSipila/DIG003-harjoitus-Description-GitHub-Pages--harjoit/blob/main/.github/workflows/analysis.yml">GitHub Actions -workflow (analysis.yml)</a></li>
+        <li><a href="https://github.com/EemeliSipila/DIG003-harjoitus-Description-GitHub-Pages--harjoit/actions/runs/44280367632">Onnistunut suoritus, lokit ja analysis-report-artefakti</a></li>
+        <li><a href="https://github.com/EemeliSipila/DIG003-harjoitus-Description-GitHub-Pages--harjoit">Koko GitHub-repositorio</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
